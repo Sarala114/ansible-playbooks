@@ -1,0 +1,11 @@
+---
+- name: this playbook is to create file
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: creating a file
+    file:
+      path: /home/ansuser/demofile
+      state: touch
+

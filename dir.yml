@@ -1,0 +1,10 @@
+---
+- name: this playbook is to create directory
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: creating dir 
+    file:
+      path: /home/ansuser/devops_dir
+      state: directory

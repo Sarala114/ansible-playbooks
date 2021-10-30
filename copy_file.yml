@@ -1,0 +1,13 @@
+---
+- name: my test playbook
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: this is to copy file
+    copy:
+     src: /home/ansuser/index.html
+     dest: /home/ansuser
+     owner: ansuser
+     group: ansuser
+     mode: 0644
